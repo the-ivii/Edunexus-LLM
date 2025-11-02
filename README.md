@@ -76,9 +76,9 @@ npm install
 ### 3. Environment Variables
 Create a `.env` file in the root directory with:
 ```
-MONGO_URI=mongodb+srv://aryansingh:aryanmongodb@cluster0.7shqalg.mongodb.net/edunexus
+MONGO_URI=mongodb+srv://aryansingh:aryanmongodb@cluster0.7shqalg.mongodb.net/D-edunexus
 JWT_SECRET=edunexus_secret_key_2024
-PORT=5000
+PORT=5001
 ```
 
 ### 4. Run the Application
