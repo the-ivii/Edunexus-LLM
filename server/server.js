@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const connectDB = require('./config/db');
 const Message = require('./models/Message');
+const bodyParser  = require('body-parser');
 
 dotenv.config();
 
@@ -18,10 +19,23 @@ const io = socketIo(server, {
   }
 });
 
-connectDB();
+const PORT = process.env.PORT || 5001;
+
+(async () => {
+  try {
+    await connectDB();
+    console.log('Database connected successfully');
+
+    server.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error('Failed to start server:', err);
+  }
+})();
 
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json({ type: ['application/json', 'application/json; charset=UTF-8'] }));
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -82,10 +96,4 @@ io.on('connection', (socket) => {
 
 app.get('/api', (req, res) => {
   res.json({ message: 'EduNexus API is running' });
-});
-
-const PORT = process.env.PORT || 5002;
-
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
 });
