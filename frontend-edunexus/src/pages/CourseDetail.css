@@ -1,0 +1,164 @@
+.course-detail-page {
+    min-height: calc(100vh - 80px);
+  }
+  
+  .course-header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 60px 20px;
+    color: white;
+  }
+  
+  .course-header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .course-instructor-info {
+    font-size: 18px;
+    margin-bottom: 16px;
+    opacity: 0.95;
+  }
+  
+  .course-detail-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 800px;
+    opacity: 0.9;
+  }
+  
+  .course-header-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .course-content {
+    padding: 40px 20px;
+  }
+  
+  .course-main {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .content-section {
+    margin-top: 30px;
+  }
+  
+  .empty-message {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-light);
+  }
+  
+  .lectures-list,
+  .assignments-list,
+  .live-classes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .lecture-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .lecture-number {
+    background: linear-gradient(135deg, var(--primary), var(--accent-dark));
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  
+  .lecture-info {
+    flex: 1;
+  }
+  
+  .lecture-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+  }
+  
+  .lecture-info p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+  
+  .duration {
+    font-size: 13px;
+    color: var(--text-light);
+    font-style: italic;
+  }
+  
+  .lecture-actions {
+    flex-shrink: 0;
+  }
+  
+  .assignment-item,
+  .live-class-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .assignment-item h3,
+  .live-class-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .assignment-item p,
+  .live-class-item p {
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+  
+  .assignment-meta,
+  .live-class-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: var(--text-light);
+  }
+  
+  @media (max-width: 768px) {
+    .course-header h1 {
+      font-size: 32px;
+    }
+  
+    .lecture-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .lecture-actions {
+      width: 100%;
+    }
+  
+    .lecture-actions .btn {
+      width: 100%;
+    }
+  }
